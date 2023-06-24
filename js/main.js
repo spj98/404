@@ -1,7 +1,18 @@
-$(window).load(function(){
-     $('.preloader').fadeOut('slow');
-});
-
+document.addEventListener('DOMContentLoaded', function() {
+	var fadeElement = document.querySelector('.fade-in');
+	fadeElement.style.opacity = 0;
+  
+	function fadeIn() {
+	  var opacity = parseFloat(fadeElement.style.opacity);
+	  if (opacity < 1) {
+		opacity += 0.02; // Adjust the increment value for desired speed
+		fadeElement.style.opacity = opacity;
+		requestAnimationFrame(fadeIn);
+	  }
+	}
+  
+	fadeIn();
+  });  
 
 /* =Main INIT Function
 -------------------------------------------------------------- */

@@ -9,6 +9,12 @@ Author URI: http://www.themewagon.com
 /* =Common Styles
 -------------------------------------------------------------- */
 
+.fade-in {
+	background-color: black;
+	opacity: 0;
+	transition: opacity 500ms ease-in-out;
+  }
+
 *,
 *:before,
 *:after {
